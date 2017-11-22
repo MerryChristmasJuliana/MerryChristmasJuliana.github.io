@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 
 	// MUSIC
-	
+
 	var currentSong = null;
 	var paused = false;
 
@@ -22,8 +22,8 @@ $(document).ready(function(){
 	}
 
 	var playlist = [
-        'media/half_light.mp3',
         'media/christmas_song.mp3',
+        'media/half_light.mp3',
         'media/baby_its_cold.mp3',
         'media/silent_night.mp3',
         'media/have_yourself.mp3'
