@@ -1,10 +1,30 @@
 $(document).ready(function(){
 
-	var half_light = new Howl({
-	  src: ['media/half_light.mp3'],
-	  autoplay: true,
-  	loop: false
-	});
+	function play_audio(file_names) {
+    sound = new Howl({
+        src: [file_names[0]],
+        volume: 0.5,
+        onend: function() {
+            file_names.shift();
+            if (file_names.length > 0) {
+                play_audio(file_names);
+            }
+        }
+    });      
+    sound.play();
+	}
+
+	var playlist = [
+        'media/half_light.mp3',
+        'media/christmas_song.mp3',
+        'media/baby_its_cold.mp3',
+        'media/silent_night.mp3',
+        'media/have_yourself.mp3'
+        ];
+
+  play_audio(playlist);
+
+
 
   $('.modal').modal();
 
