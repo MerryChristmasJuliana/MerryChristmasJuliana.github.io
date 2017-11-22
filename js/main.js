@@ -1,5 +1,11 @@
 $(document).ready(function(){
 
+
+	// MUSIC
+	
+	var currentSong = null;
+	var paused = false;
+
 	function play_audio(file_names) {
     sound = new Howl({
         src: [file_names[0]],
@@ -10,7 +16,8 @@ $(document).ready(function(){
                 play_audio(file_names);
             }
         }
-    });      
+    });
+    currentSong = sound;  
     sound.play();
 	}
 
@@ -23,6 +30,22 @@ $(document).ready(function(){
         ];
 
   play_audio(playlist);
+
+  $(document).keypress(function(e) {
+	  if(e.which == 112) {
+	    if (currentSong != null) {
+	    	if (paused) {
+	    		currentSong.play();
+	    		paused = !paused;
+	    	} else {
+	    		currentSong.pause();
+	    		paused = !paused;
+	    	}
+	    }
+	  }
+	});
+
+	// MUSIC
 
 
 
