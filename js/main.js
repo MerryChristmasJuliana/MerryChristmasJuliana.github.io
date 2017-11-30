@@ -1,5 +1,19 @@
 $(document).ready(function(){
 
+  // SQUARE SIZES
+  if ($(window).width() > 992) {
+    var boxDimensions = (($(window).width() * .7) / 6); 
+    $(".box").width(boxDimensions  - 25);
+    $(".box").height(boxDimensions  - 25);
+  }
+
+  if ($(".box").width() > 200) {
+    $(".box").width(200);
+    $(".box").height(200);
+  }
+
+  // SQUARE SIZES
+
 
 	// MUSIC
 
