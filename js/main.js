@@ -64,7 +64,7 @@ $(document).ready(function(){
       var str = prompt("Code");
       var res = str.toLowerCase();
       if (res == "lol") {
-        $('.box').css('background', 'url("img/Day4/food.jpg") no-repeat center center fixed');
+        $('.box').css('background', 'url("img/poo.jpg") no-repeat center center fixed');
         $('.box').css("background-color", "rgba(255, 255, 255, .1)");
       } else if (res == "stopp") {
         $('.box').css('background', 'none');
