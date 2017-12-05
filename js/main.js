@@ -59,11 +59,24 @@ $(document).ready(function(){
 	  }
 	});
 
-	// MUSIC
-
-
+  $(document).keypress(function(e) {
+    if(e.which == 108) {
+      var str = prompt("Code");
+      var res = str.toLowerCase();
+      if (res == "lol") {
+        $('.box').css('background', 'url("img/Day4/food.jpg") no-repeat center center fixed');
+        $('.box').css("background-color", "rgba(255, 255, 255, .1)");
+      } else if (res == "stopp") {
+        $('.box').css('background', 'none');
+        $('.box').css("background-color", "rgba(255, 255, 255, .1)");
+      }
+    }
+  });
 
   $('.modal').modal();
+
+  // MUSIC
+
 
   $('#day-1').click(function() {
   	$('#day1').modal('open');
