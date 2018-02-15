@@ -11,12 +11,10 @@ $(document).ready(function(){
     $(".box").width(200);
     $(".box").height(200);
   }
-
   // SQUARE SIZES
 
 
 	// MUSIC
-
 	var currentSong = null;
 	var paused = false;
 
@@ -58,6 +56,8 @@ $(document).ready(function(){
 	    }
 	  }
 	});
+  // MUSIC
+
 
   $(document).keypress(function(e) {
     if(e.which == 108) {
@@ -69,13 +69,31 @@ $(document).ready(function(){
       } else if (res == "stopp") {
         $('.box').css('background', 'none');
         $('.box').css("background-color", "rgba(255, 255, 255, .1)");
+      } else if (res == "valentine") {
+        $('body').css('background', 'url("img/flower.jpg") no-repeat center center fixed');
+        $('body').css('-webkit-background-size', 'cover');
+        $('body').css('-moz-background-size', 'cover');
+        $('body').css('-o-background-size', 'cover');
+        $('body').css('background-size', 'cover');
+
+        $('.christmas').css('display', 'none');
+        $('#happy_valentines').css('display', 'block');
+        $('.valentines').css('display', 'block');
+      } else if (res == "advent") {
+        $('body').css('background', 'url("img/ornament.jpg") no-repeat center center fixed');
+        $('body').css('-webkit-background-size', 'cover');
+        $('body').css('-moz-background-size', 'cover');
+        $('body').css('-o-background-size', 'cover');
+        $('body').css('background-size', 'cover');
+
+        $('.christmas').css('display', 'block');
+        $('#happy_valentines').css('display', 'none');
+        $('.valentines').css('display', 'none');
       }
     }
   });
 
   $('.modal').modal();
-
-  // MUSIC
 
 
   $('#day-1').click(function() {
@@ -150,6 +168,7 @@ $(document).ready(function(){
   $('#day-24').click(function() {
   	$('#day24').modal('open');
   });
-
-  
+  $('#day-v').click(function() {
+    $('#dayv').modal('open');
+  });
 });

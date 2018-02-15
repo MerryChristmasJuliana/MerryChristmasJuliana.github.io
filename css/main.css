@@ -1,5 +1,6 @@
 body {
 	background: url("../img/ornament.jpg") no-repeat center center fixed;
+	/*background: url("../img/flower.jpg") no-repeat center center fixed;*/
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -129,6 +130,22 @@ body {
     -webkit-transform: translate3D(7.5%, 100%, 0);
             transform: translate3D(7.5%, 100%, 0);
   }
+}
+
+
+/* HAPPY VALENTINES DAY */
+#happy_valentines {
+	color: white;
+	font-family: 'zapfino',serif;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 60px;
+	margin-bottom: 40px;
+}
+
+.valentines {
+	display: none;
 }
 
 
